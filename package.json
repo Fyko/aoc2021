@@ -1,0 +1,43 @@
+{
+    "name": "aoc",
+    "version": "0.1.0",
+    "description": "my advent of code stuff",
+    "main": "dist/index.js",
+    "author": "Carter Himmel <me@fyko.net>",
+    "license": "MIT",
+    "imports": {
+        "#loadInput": "./dist/loadInput.js"
+    },
+    "scripts": {
+        "build": "rimraf dist && tsc",
+        "lint": "eslint src --ext .ts",
+        "lint:fix": "eslint src --fix --ext .ts"
+    },
+    "devDependencies": {
+        "@types/node": "17.0.4",
+        "@typescript-eslint/eslint-plugin": "^5.8.0",
+        "@typescript-eslint/parser": "^5.8.0",
+        "eslint": "^8.5.0",
+        "eslint-config-marine": "^9.1.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "prettier": "^2.5.1",
+        "rimraf": "^3.0.2",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.5.4"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{mjs,js,ts}": "eslint --fix --ext mjs,js,ts",
+        "*.{json,yml,yaml}": "prettier --write"
+    },
+    "volta": {
+        "node": "17.3.0",
+        "npm": "7.6.0"
+    },
+    "packageManager": "yarn@3.1.1"
+}

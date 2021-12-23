@@ -1,0 +1,30 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"baseUrl": ".",
+		"alwaysStrict": true,
+		"lib": ["esnext"],
+		"module": "commonjs",
+		"noUnusedParameters": true,
+		"sourceMap": true,
+		"moduleResolution": "node",
+		"noUnusedLocals": true,
+		"removeComments": false,
+		"target": "ES2020",
+		"importsNotUsedAsValues": "error",
+		"strictNullChecks": true,
+		"outDir": "dist",
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"paths": {
+			"#loadInput": ["./src/loadInput.ts"]
+		}
+	},
+	"exclude": [
+		"node_modules"
+	],
+	"include": [
+		"src"
+	]
+}
